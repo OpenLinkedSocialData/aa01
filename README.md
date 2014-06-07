@@ -3,9 +3,12 @@ aa01
 
 aa 0.1 é o aa em flask e mongo via http na url mesmo, + facinho
 
-1. Descrição
+* auto-gen TOC:
+{:toc}
 
-1.1. Formatação da mesagem
+# Descrição
+
+## Formatação da mesagem
 
 Uma mensagem de aa (um 'shout') possui 3 partes.
 
@@ -44,6 +47,37 @@ e usada começando o shout com uma pontuação de separação:
 
     ; especificando protocolo de registro de atividade para o lm
 * A sintaxe está em plena discussão e evolução.
+* Este conjunto de classes é uma recomendação inicial, escrita aqui para uso, modificação e discussão:
+| Classe/Etiqueta/Tag | Significado |
+| dl                  | dados linkados, web semântica |
+| re                  | reuniões |
+| dc                  | documentações |
+| gv                  | governo, estado |
+| in                  | institucional   |
+| jd                  | jardinagem e trabalhos referentes à terra e cultivos |
+| li                  | linguística |
+| pr                  | programação de computadores |
+| so                  | sociedade/ativismo/crítica social |  
+| sa                  | referente ao sagrado |
+| art                  | artes      |
+| mu                  | música      |
+| ma                  | matemática  |
+| es                  | escrita     |
+| eg                  | email group |
+| id                  | identi.ca   |
+| di                  | diaspora    |
+| fb                  | facebook    |
+| irc                 | irc         |
+| vc                  | visão computacional |
+| cc                  | criatividade computacional |
+| rs                  | redes sociais |
+| jg                  | jogos       |
+| lm                  | referente ao labMacambira.sf.net |
+| mm                  | mão na maça, fazeção   |
+| bc                  | referente ao bem comum |
+| aa                  | referente ao acrônimo ambíguo |
+
+
 
 
 
@@ -54,5 +88,7 @@ e usada começando o shout com uma pontuação de separação:
 
 ==========
 
-Questões: convencionamos tags de 1 letra só ou fica muito difícil de ler?
+Questões: 
+* Convencionamos tags de 1 letra só ou fica muito difícil de ler?
+* Há já algum conjunto de tags que podemos usar? geekcode?
 
