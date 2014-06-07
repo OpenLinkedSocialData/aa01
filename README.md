@@ -32,6 +32,7 @@ Mais especificações e recursos:
 * Pode-se especificar ou sobrescrever etiquetas/tags/classes com o comando separador composto :::>>>. Exemplos:
 
     jj :::>>> bc jg rs sl (jj é classe que é as outras quatro classes)
+    
     ut :::>>> finalização, últimos retoques para terminar milestone ou projeto ou mídia (ut marca esta etapa)
 
 Mundo aberto, ou seja, a ausência da classe não implica que a classe não seja aplicável.
