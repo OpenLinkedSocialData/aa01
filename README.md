@@ -10,14 +10,12 @@ aa 0.1 é o aa em flask e mongo via http na url mesmo, + facinho
 Uma mensagem de aa (um 'shout') possui 3 partes.
 
     __ __ __ ___ <!?.,;:> msg msg msg msg
-    
     |------------|-------|---------------|
-    
     |  Parte 1    Parte 2    Parte 3
 
 Exemplo:
 
-> bc rs jg rr: rascunhado sobre o jogo para a lista, incorporado recursos redes sociais, para batalha entre os tecidos de amigos
+    bc rs jg rr: rascunhado sobre o jogo para a lista, incorporado recursos redes sociais, para batalha entre os tecidos de amigos
 
 A primeira parte possui as classes (tags) "bc", "rs", "jg" e "rr". o ":", são classificadores da mensagem.
 A segunda parte é o divisor entre a classificação e a mensagem em si.
