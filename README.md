@@ -10,7 +10,9 @@ aa 0.1 é o aa em flask e mongo via http na url mesmo, + facinho
 Uma mensagem de aa (um 'shout') possui 3 partes.
 
 > __ __ __ ___ <!?.,;:> msg msg msg msg
+
 > |------------|-------|---------------|
+
 >    Parte 1    Parte 2    Parte 3
 
 Exemplo:
