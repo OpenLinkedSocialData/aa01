@@ -103,4 +103,3 @@ Interfaces para visualização dos dados de AA ecessam o BD mongo ou as triplas 
 #Questões: 
 * Convencionamos tags de 1 letra só ou fica muito difícil de ler?
 * Há já algum conjunto de tags que podemos usar? geekcode?
-
