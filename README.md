@@ -49,6 +49,7 @@ e usada começando o shout com uma pontuação de separação:
 * A sintaxe está em plena discussão e evolução.
 * Este conjunto de classes é uma recomendação inicial, escrita aqui para uso, modificação e discussão:
 | Classe/Etiqueta/Tag | Significado |
+|---------------------|-------------|
 | dl                  | dados linkados, web semântica |
 | re                  | reuniões |
 | dc                  | documentações |
