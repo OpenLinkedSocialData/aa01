@@ -5,7 +5,7 @@ O AA é a Autorregulação Algorítmica.
 
 O aa 0.1 é o AA em flask e mongo via http na url mesmo, + facinho.
 
-
+[TOC]
 
 # Descrição
 
@@ -77,7 +77,7 @@ e usada começando o shout com uma pontuação de separação:
 | rs                  | redes sociais |
 | jg                  | jogos       |
 | lm                  | referente ao labMacambira.sf.net |
-| mm                  | mão na maça, fazeção   |
+| mm                  | mão na massa, fazeção   |
 | bc                  | referente ao bem comum |
 | aa                  | referente ao acrônimo ambíguo |
 
@@ -86,7 +86,7 @@ e usada começando o shout com uma pontuação de separação:
 
 O AA (autorregulação algorítmica) pode ser implementado de várias formas. Aqui está uma descrição como implementada neste repositório, para fins de uso do labMacambira.sf.net.
 
-O AA recebe mensagens (shouts) via HTTP. Por onde é fácil implementar facilidades em linha de comando, IRC, twitter, etc. As mensagens recebidas são enviadas para um BD mongo online (gratuíto pode-se usar 500mb, o que basta), usuário de Twitter. Há facilidades para envio da mensagem para repasse pela lalenia e para integração via dados linkados (triplas RDF, talvez em conjunto aos dados do particia.br, com as ontologias OPA e OPS).
+Esta implementação recebe mensagens (shouts) via HTTP. Por onde é fácil implementar facilidades em linha de comando, IRC, twitter, etc. As mensagens recebidas são enviadas para um BD mongo online (gratuíto pode-se usar 500mb, o que basta), usuário de Twitter. Há facilidades para envio da mensagem para repasse pela lalenia e para integração via dados linkados (triplas RDF, talvez em conjunto aos dados do particia.br, com as ontologias OPA e OPS).
 
 Esquematicamente:
 
@@ -95,7 +95,7 @@ Esquematicamente:
     Twitter                   ->                    -> Twitter
     (fb? identi.ca? diaspora) ->                    -> lalenia
 
-Interfaces para visualização dos dados de AA ecessam o BD mongo ou as triplas RDF via algum endpoint SparQL.
+Interfaces para visualização dos dados de AA acessam o BD mongo ou as triplas RDF via algum endpoint SparQL.
 
 
 ==========
