@@ -1,13 +1,19 @@
 #-*- coding: utf8 -*-
 import os, pymongo, datetime, string
-from flask import Flask, request
-# dicione
+from flask import Flask, request, jsonify
+# adicione
 ### import urllib
 ### urllib.urlretrieve("http://0.0.0.0:5000/shout?nick=%s&shout=%s"%("nickEscolhido",urllib.quote("mensagem formatada com urllib.quote"))
 # em um app python para enviar um shout
 
 app = Flask(__name__)
 
+
+@app.route('/allJson/')
+def allJson():
+    client=pymongo.MongoClient("mongodb://labmacambira:macambira00@ds031948.mongolab.com:31948/aaserver")
+    shouts=client.aaserver.shouts.find({},{"_id":0})
+    return jsonify(shouts=shouts)
 
 @app.route('/minimumClient/')
 def minimumClient():

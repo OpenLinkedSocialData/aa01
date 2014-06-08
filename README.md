@@ -5,7 +5,38 @@ O AA é a Autorregulação Algorítmica.
 
 O aa 0.1 é o AA em flask e mongo via http na url mesmo, + facinho.
 
-[TOC]
+# Recursos
+
+## Scripts básicos
+### aaServer.py
+
+Um aplicativo mínimo em Flask cujos caminhos e funções são:
+
+* /minimumClient/ -> exibe os shouts
+* /allJson/ -> retorna os shouts todos como json
+* /shout/ -> usado para registrar novo shout via GET, com ?nick=anonymous&shout=;aqui a mensagem de aa
+
+### aa.py
+
+Script mínimo para usar o aa via linha de comando. Pode ser usado com:
+
+    $ sudo cp aa.py /usr/local/bin/aa
+    $ aa primeira mensagem de aa, ainda anonima
+
+Para colocar seu nick, abra o aa.py e mude o valor da variável NICK.
+
+### aaTwitter.py
+
+Registra as mensagem que usarem a hashtag #aao0 como shouts de aa.
+
+## Instância online
+
+Provisório talvez, mas aqui está:
+* http://aaserver.herokuapp.com/minimumClient/ para ver todos os shouts
+* http://aaserver.herokuapp.com/allJson/ para receber todos os shouts via json
+* http://aaserver.herokuapp.com/shout?nick=oNickOuAnonimo&shout=a mensagem de shout eh registrada como necessário => para registrar os shouts via http.
+* No canal IRC #labmacambira/Freenode, os shouts são registrados pela lalenia sempre que a mensagem começa com ;aa
+* Tweets que possuam a hashtag #aao0 são registradas pelo streamer.
 
 # Descrição
 
@@ -103,3 +134,4 @@ Interfaces para visualização dos dados de AA acessam o BD mongo ou as triplas 
 #Questões: 
 * Convencionamos tags de 1 letra só ou fica muito difícil de ler?
 * Há já algum conjunto de tags que podemos usar? geekcode?
+* Colocar reiniciar do streamador no cron?
