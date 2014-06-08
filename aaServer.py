@@ -1,6 +1,10 @@
 #-*- coding: utf8 -*-
 import os, pymongo, datetime, string
 from flask import Flask, request
+# dicione
+### import urllib
+### urllib.urlretrieve("http://0.0.0.0:5000/shout?nick=%s&shout=%s"%("nickEscolhido",urllib.quote("mensagem formatada com urllib.quote"))
+# em um app python para enviar um shout
 
 app = Flask(__name__)
 
