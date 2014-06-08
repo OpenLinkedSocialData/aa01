@@ -1,3 +1,4 @@
+#-*- coding: utf8 -*-
 import os, pymongo, datetime, string
 from flask import Flask, request
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 def minimumClient():
     client=pymongo.MongoClient("mongodb://labmacambira:macambira00@ds031948.mongolab.com:31948/aaserver")
     shouts=client.aaserver.shouts.find({},{"_id":0})
-    shouts=string.join([str(ss) for ss in shouts],"<br />")
+    shouts=string.join([str(ss)[1:-1] for ss in shouts][::-1],"<br />"*2).replace("u'","").replace("'","")
     print shouts
     return shouts
 
