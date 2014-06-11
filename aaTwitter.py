@@ -1,5 +1,7 @@
 #! /usr/bin/env python
 #-*- coding: utf8 -*-
+# put this on /usr/local/bin/
+# without .py extension
 from twython import TwythonStreamer
 import datetime, pymongo
 
