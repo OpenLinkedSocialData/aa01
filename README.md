@@ -28,8 +28,20 @@ Para colocar seu nick, abra o aa.py e mude o valor da variável NICK.
 ### aaTwitter.py
 
 Registra as mensagem que usarem a hashtag #aao0 como shouts de aa.
+Para subir, substitua Procfile e requirements.txt por BACK/Procfile.stream e BACK/requirements.txt.stream
+respectivamente. Depois
+    $ heroku login
+    $ heroku create myaastreamer
+    $ git push heroku master
 
-## Instância online
+## Instância online para exibir e disponibilizar os dados
+
+Para subir, substitua Procfile e requirements.txt por BACK/Procfile.server e BACK/requirements.txt.server
+respectivamente. Depois: 
+
+    $ heroku login
+    $ heroku create myaaserver # modifica o acesso no .git/config
+    $ git push heroku master 
 
 Provisório talvez, mas aqui está:
 * http://aaserver.herokuapp.com/minimumClient/ para ver todos os shouts
