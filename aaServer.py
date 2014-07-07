@@ -13,6 +13,7 @@ app = Flask(__name__)
 def allJson():
     client=pymongo.MongoClient("mongodb://labmacambira:macambira00@ds031948.mongolab.com:31948/aaserver")
     shouts=client.aaserver.shouts.find({},{"_id":0})
+    shouts=[ss for ss in shouts]
     return jsonify(shouts=shouts)
 
 @app.route('/minimumClient/')
