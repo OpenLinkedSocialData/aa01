@@ -22,10 +22,10 @@ class MyStreamer(TwythonStreamer):
     def on_error(self, status_code, data):
         print status_code
 print "iniciando streaming"
-class tw4: # puxa 
-    tak="iub8wm03f4sI4EMvxgdoicwIe"
-    taks="wlMxqHGSKjrKjhTPhQtkdR9bUnK7sZyjgsUEEcxDlHqoJCHO4D"
-    tat="18882547-183eFHigoFCYlZDh4IUSkVtsF6WM0CbX6yvu0Ah3a"
-    tats="YrWWp3GNudB7rXgHaj6cokJyXM6SW3GUTmO1tqoIYv6Y9"
+class tw4:
+    tak= "U3gkdcw144pb3H315Vsmphne5"
+    taks="jbuLKuamEaiNPXJfhfC9kaXYcoSSfRIgTldwuQYCcUJzEGNukU"
+    tat= "2430470406-45gX6ihMxnKQQmjX2yR1VoaTQIddgY5bT7OSOzT"
+    tats="bHS4NkMwBFaysdVqnsT25xhNzZwEbM64KPdpRDB6RqZ2Z"
 stream=MyStreamer(tw4.tak,tw4.taks,tw4.tat,tw4.tats)
 stream.statuses.filter(track="#aao0")
