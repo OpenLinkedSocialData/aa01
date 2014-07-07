@@ -1,1 +1,1 @@
-web: gunicorn aaServer:app
+worker: python aaTwitter.py 
