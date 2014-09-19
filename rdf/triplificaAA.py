@@ -104,7 +104,6 @@ for shout in d["messages"]:
         uri_=aas+"#"+shout[1]
         g.add((uri,aa.session,uri_))
     uri_=aap+"#"+shout[1]
-    g.add((uri,aa.session,uri_))
     if shout[2] in du.keys():
         user=du[shout[2]]
         g.add((uri,aa.user,user))
@@ -115,11 +114,11 @@ for shout in d["messages"]:
         count+=1
     # pulado task_id pois nao há mais dados
     # na base para relacionar com ele
-    message=session[3]
+    message=shout[4]
     g.add((uri,aa.shoutMessage,r.Literal(message)))
-    created=session[4]
+    created=shout[5]
     g.add((uri,aa.created,r.Literal(created,datatype= xsd.dateTime)))
-    valid=session[5]
+    valid=shout[6]
     g.add((uri, aa.valid, r.Literal(valid,datatype=xsd.boolean)))
 
 print time.time()-T; T=time.time()
