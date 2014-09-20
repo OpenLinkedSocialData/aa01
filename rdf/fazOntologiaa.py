@@ -6,6 +6,7 @@ T=time.time()
 
 aa = r.Namespace("http://purl.org/socialparticipation/aa/")
 rdf = r.namespace.RDF
+rdfs = r.namespace.RDFS
 foaf = r.namespace.FOAF
 owl = r.namespace.OWL
 dc=r.namespace.DC
@@ -13,16 +14,32 @@ dct=r.namespace.DCTERMS
 dcty=r.Namespace("http://purl.org/dc/dcmitype/")
 gndo=r.Namespace("http://d-nb.info/standards/elementset/gnd#")
 sc=r.Namespace("http://schema.org/")
-g.namespace_manager.bind("ops", "http://purl.org/socialparticipation/ops#")    
+ops = r.Namespace("http://purl.org/socialparticipation/ops#")
+sioc = r.Namespace("http://rdfs.org/sioc/ns#")
+xsd = r.namespace.XSD
 
 g = r.Graph()
+g.namespace_manager.bind("ops", "http://purl.org/socialparticipation/ops#")    
+g.namespace_manager.bind("rdf", r.namespace.RDF)    
+g.namespace_manager.bind("rdfs", r.namespace.RDFS)    
+g.namespace_manager.bind("foaf", r.namespace.FOAF)    
+g.namespace_manager.bind("xsd", r.namespace.XSD)    
+g.namespace_manager.bind("owl", r.namespace.OWL)    
+g.namespace_manager.bind("ops", "http://purl.org/socialparticipation/ops#")
+g.namespace_manager.bind("dc", "http://purl.org/dc/elements/1.1/")    
+g.namespace_manager.bind("dct", "http://purl.org/dc/terms/")    
+g.namespace_manager.bind("dcty", "http://purl.org/dc/dcmitype/")    
+g.namespace_manager.bind("gndo", "http://d-nb.info/standards/elementset/gnd#")    
+g.namespace_manager.bind("schema", "http://schema.org/")
+g.namespace_manager.bind("sioc", "http://rdfs.org/sioc/ns#")    
+
 # faz ontologia:
 # 1) info sobre esta ontologia
 ouri=aa.ontologiaa+".owl"
 g.add((ouri,rdf.type,owl.Ontology))
-g.add((ouri,dct.title,"Ontologiaa"))
-g.add((ouri,owl.versionInfo,"0.01a"))
-g.add((ouri,dct.description,"Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces"))
+g.add((ouri,dct.title,r.Literal("Ontologiaa")))
+g.add((ouri,owl.versionInfo,r.Literal("0.01a")))
+g.add((ouri,dct.description,r.Literal("Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces")))
 
 # 2) adicionadas classes pai das classes do aa
 g.add((aa.User,    rdfs.subClassOf, foaf.Person))
@@ -77,7 +94,7 @@ g.add((aa.email, rdf.type, owl.DataProperty))
 b_=r.BNode()
 g.add((aa.Shout, rdfs.subClassOf, b_))
 g.add((b_,rdf.type,owl.Restriction))
-g.add((b_,rdf.onProperty,aa.user))
+g.add((b_,owl.onProperty,aa.user))
 g.add((b_,owl.someValuesFrom,aa.User))
 
 # data property
@@ -85,23 +102,27 @@ g.add((b_,owl.someValuesFrom,aa.User))
 b_=r.BNode()
 g.add((aa.Shout, owl.subClassOf, b_))
 g.add((b_,rdf.type,owl.Restriction))
-g.add((b_,rdf.onProperty,aa.shoutMessage))
+g.add((b_,owl.onProperty,aa.shoutMessage))
 g.add((b_,owl.someValuesFrom,xsd.string))
 
 b_=r.BNode()
 g.add((aa.Shout, owl.subClassOf, b_))
 g.add((b_,rdf.type,owl.Restriction))
-g.add((b_,rdf.onProperty,aa.created))
+g.add((b_,owl.onProperty,aa.created))
 g.add((b_,owl.someValuesFrom,xsd.dateTime))
 
 b_=r.BNode()
 g.add((aa.Session, owl.subClassOf, b_))
 g.add((b_,rdf.type,owl.Restriction))
-g.add((b_,rdf.onProperty,aa.created))
+g.add((b_,owl.onProperty,aa.created))
 g.add((b_,owl.someValuesFrom,xsd.dateTime))
 
 b_=r.BNode()
 g.add((aa.User, owl.subClassOf, b_))
 g.add((b_,rdf.type,owl.Restriction))
-g.add((b_,rdf.onProperty,aa.nick))
+g.add((b_,owl.onProperty,aa.nick))
 g.add((b_,owl.someValuesFrom,xsd.string))
+
+f=open("ontologiaa.owl","wb")
+f.write(g.serialize(format="turtle"))
+f.close()

@@ -1,5 +1,15 @@
 ## Anotações sobre a triplificação dos dados do AA
 
+### Notas em destaque:
+
+* a propriedade aa:score é o único elemento da ontologiaa que não foi relacionada a nenhuma URI externa. Alguma sugestão de alguma propriedade para usar como super propriedade da aa:score?
+* A IRI da ontologiaa é http://purl.org/socialparticipation/aa
+* Todas as classes (conceitos) são escritas em CamelCase. Ex:
+http://purl.org/socialparticipation/aa/User
+* Todas as instâncias advindas do BD do AA recebem uma URI com a IRI da ontologiaa, a classe da qual é instância, e um id para a classe. Ex: http://purl.org/socialparticipation/aa/User#Akin
+* As restrições existenciais nas propriedades de dados foram escritas sem que tenha sido achado exemplo na literatura. É provável que esteja correto, mas não é certeza.
+* É necessário experimentar com o endpoint sparql Fuseki/Jena para ver se as inferências são feitas em tempo de consulta ou se precisamos renderizar toda a triplestore de antemão.
+
 ### Roteiro de triplificação:
 * Cria base de dados e restaura do .sql
     $ tar zxvf dump.tar.gz
