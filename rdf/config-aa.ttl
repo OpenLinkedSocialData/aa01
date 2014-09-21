@@ -2,11 +2,18 @@
 
 
 ##########################
+# arrumados os enderecamentos dos arquivos:
+# ontologiaa.owl
+# aaStore.rdf
+# opaStorePopulada.rdf apresentados a seguir:
+
+# 
+## com o pacote jena-fuseki-xx aberto na pasta atual e
 # para rodar fuseki com este arquivo:
 # $ ./fuseki-server --port=82 --config=config-aa.ttl
 
 # para rodar fuseki com configuração em linha de comando:
-# $ java -Xmx1200M -jar /disco/endpoint/jena-fuseki-1.0.2/fuseki-server.jar --file=/disco/triplas/storeOpaPopulada.rdf --port=82 /participabr
+# $ java -Xmx1200M -jar ./fuseki-server.jar --file=/disco/triplas/storeOpaPopulada.rdf --port=82 /participabr
 #############
 
 ## A collection of example configurations for Fuseki
