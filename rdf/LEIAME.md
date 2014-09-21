@@ -9,6 +9,10 @@ http://purl.org/socialparticipation/aa/User
 * Todas as instâncias advindas do BD do AA recebem uma URI com a IRI da ontologiaa, a classe da qual é instância, e um id para a classe. Ex: http://purl.org/socialparticipation/aa/User#Akin
 * As restrições existenciais nas propriedades de dados foram escritas sem que tenha sido achado exemplo na literatura. É provável que esteja correto, mas não é certeza.
 * É necessário experimentar com o endpoint sparql Fuseki/Jena para ver se as inferências são feitas em tempo de consulta ou se precisamos renderizar toda a triplestore de antemão.
+* O arquivo config-aa.ttl é o arquivo de configuração do endpoint fuseki/jena que executa reasoning nos dados do aa com a ontologiaa, e serve os dados do participa.br
+* É usado o http://jena.hpl.hp.com/2003/OWLMiniFBRuleReasoner (não o micro ou o padrão, pois pareceu funcionar bem)
+* Parece demorar para responder a primeira query com dados do aa, mas só.
+
 
 ### Roteiro de triplificação:
 * Cria base de dados e restaura do .sql

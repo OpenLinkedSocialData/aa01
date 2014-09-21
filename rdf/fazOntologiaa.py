@@ -124,5 +124,10 @@ g.add((b_,owl.onProperty,aa.nick))
 g.add((b_,owl.someValuesFrom,xsd.string))
 
 f=open("ontologiaa.owl","wb")
+f.write(g.serialize())
+f.close()
+
+
+f=open("ontologiaa.ttl","wb")
 f.write(g.serialize(format="turtle"))
 f.close()
