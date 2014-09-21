@@ -1,0 +1,80 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcty: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gndo: <http://d-nb.info/standards/elementset/gnd#> .
+@prefix ops: <http://purl.org/socialparticipation/ops#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/socialparticipation/aa/Session> rdfs:subClassOf dcty:Collection,
+        dcty:Event ;
+    owl:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://purl.org/socialparticipation/aa/created> ;
+            owl:someValuesFrom xsd:dateTime ] .
+
+<http://purl.org/socialparticipation/aa/Shout> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://purl.org/socialparticipation/aa/user> ;
+            owl:someValuesFrom <http://purl.org/socialparticipation/aa/User> ],
+        sioc:Port,
+        foaf:Document ;
+    owl:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://purl.org/socialparticipation/aa/created> ;
+            owl:someValuesFrom xsd:dateTime ],
+        [ a owl:Restriction ;
+            owl:onProperty <http://purl.org/socialparticipation/aa/shoutMessage> ;
+            owl:someValuesFrom xsd:string ] .
+
+<http://purl.org/socialparticipation/aa/checkMessage> a owl:DataProperty,
+        owl:FunctionalProperty ;
+    rdfs:subPropertyOf schema:text .
+
+<http://purl.org/socialparticipation/aa/checker> a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf gndo:revisor .
+
+<http://purl.org/socialparticipation/aa/email> a owl:DataProperty,
+        owl:FunctionalProperty ;
+    owl:equivalentProperty foaf:created .
+
+<http://purl.org/socialparticipation/aa/ontologiaa.owl> a owl:Ontology ;
+    dct:description "Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces" ;
+    dct:title "Ontologiaa" ;
+    owl:versionInfo "0.01a" .
+
+<http://purl.org/socialparticipation/aa/screencast> a owl:DataProperty,
+        owl:FunctionalProperty ;
+    rdfs:subPropertyOf schema:video .
+
+<http://purl.org/socialparticipation/aa/session> a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf schema:collection .
+
+<http://purl.org/socialparticipation/aa/User> rdfs:subClassOf dc:Agent,
+        ops:Participant,
+        foaf:Person ;
+    owl:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://purl.org/socialparticipation/aa/nick> ;
+            owl:someValuesFrom xsd:string ] .
+
+<http://purl.org/socialparticipation/aa/nick> a owl:DataProperty,
+        owl:FunctionalProperty ;
+    owl:equivalentProperty foaf:nick .
+
+<http://purl.org/socialparticipation/aa/shoutMessage> a owl:DataProperty,
+        owl:FunctionalProperty ;
+    rdfs:subPropertyOf schema:text .
+
+<http://purl.org/socialparticipation/aa/user> a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:subPropertyOf foaf:maker .
+
+<http://purl.org/socialparticipation/aa/created> a owl:DataProperty,
+        owl:FunctionalProperty ;
+    owl:equivalentProperty dct:created .
+
