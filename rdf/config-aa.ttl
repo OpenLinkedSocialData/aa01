@@ -1,5 +1,14 @@
 # Licensed under the terms of http://www.apache.org/licenses/LICENSE-2.0
 
+
+##########################
+# para rodar fuseki com este arquivo:
+# $ ./fuseki-server --port=82 --config=config-aa.ttl
+
+# para rodar fuseki com configuração em linha de comando:
+# $ java -Xmx1200M -jar /disco/endpoint/jena-fuseki-1.0.2/fuseki-server.jar --file=/disco/triplas/storeOpaPopulada.rdf --port=82 /participabr
+#############
+
 ## A collection of example configurations for Fuseki
 
 @prefix :        <#> .
