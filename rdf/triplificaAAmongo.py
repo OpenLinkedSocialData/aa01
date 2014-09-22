@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-import pymongo, datetime, string, rdflib as r, time
+import pymongo, datetime, string, rdflib as r, time,urllib
 T=time.time()
 client=pymongo.MongoClient("mongodb://labmacambira:macambira00@ds031948.mongolab.com:31948/aaserver")
 shouts=client.aaserver.shouts.find({})
@@ -24,14 +24,19 @@ for shout in shouts_:
     uri=aam+"#"+str(shout["_id"])
     g.add((uri,rdf.type,aa.Shout))
     g.add((uri,aa.provenance,r.Literal("MongoDB")))
-    user=aap+"#"+shout["nick"]
-    if user not in g.subjects(rdf.type, aa.User):
-        print user
-        g.add((user,rdf.type,aa.User))
-        g.add((user, aa.nick, r.Literal(shout["nick"]) ))
+    # acha user pelo nick, usa uri. Caso contrario monta
+    foo=g.subjects(aa.nick,r.Literal(shout["nick"]))
+    try:
+        uri_=foo.next()
+    except:
+        uri_=aap+"#"+urllib.quote(shout["nick"])
+    if uri_ not in g.subjects(rdf.type, aa.User):
+        g.add((uri_,rdf.type,aa.User))
+        g.add((uri_, aa.nick, r.Literal(shout["nick"]) ))
+        print uri_ +" n tem"
     else:
-        print user +" jah tem"
-    g.add((uri,aa.user,user))
+        pass #print uri_ +" jah tem"
+    g.add((uri,aa.user,uri_))
     # pulado task_id pois nao há mais dados
     # na base para relacionar com ele
     message=shout["shout"]

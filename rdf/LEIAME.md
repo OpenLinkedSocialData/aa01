@@ -10,10 +10,11 @@ http://purl.org/socialparticipation/aa/User
 * As restrições existenciais nas propriedades de dados foram escritas sem que tenha sido achado exemplo na literatura. É provável que esteja correto, mas não é certeza.
 * É necessário experimentar com o endpoint sparql Fuseki/Jena para ver se as inferências são feitas em tempo de consulta ou se precisamos renderizar toda a triplestore de antemão.
 * O arquivo config-aa.ttl é o arquivo de configuração do endpoint fuseki/jena que executa reasoning nos dados do aa com a ontologiaa, e serve os dados do participa.br
-* É usado o http://jena.hpl.hp.com/2003/OWLMiniFBRuleReasoner (não o micro ou o padrão, pois pareceu funcionar bem)
+* É usado o http://jena.hpl.hp.com/2003/OWLMicroFBRuleReasoner, não o mini ou o padrão, pois é o único que funciona sempre nos testes com os dados triplificados e a ontologiaa.
 * Parece demorar para responder a primeira query com dados do aa, mas só.
 * Ao iniciar o fuseki com o config-aa.ttl, há vários "WARN  Lexical form '2011-09-06 07:56:57' not valid for datatype http://www.w3.org/2001/XMLSchema#dateTime".
 * Criada propriedade aa:provenance (objeto Literal("MongoDB")) na triplificação dos dados do mongoDB. A propriedade não consta ainda na ontologia ou diagramas.
+* Adicionado user da sessão, que é o usuário que está dando os shouts. Um aa:user saindo de uma instância de um aa:Session e chegando em uma URI de participante do aa.
 
 
 ### Roteiro de triplificação:
