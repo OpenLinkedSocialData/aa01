@@ -46,7 +46,7 @@ g.add((aa.User,    rdfs.subClassOf, foaf.Person))
 g.add((aa.User,    rdfs.subClassOf, dc.Agent))
 g.add((aa.User,    rdfs.subClassOf, ops.Participant))
 g.add((aa.Shout,   rdfs.subClassOf, foaf.Document))
-g.add((aa.Shout,   rdfs.subClassOf, sioc.Port))
+g.add((aa.Shout,   rdfs.subClassOf, sioc.Post))
 g.add((aa.Session, rdfs.subClassOf, dcty.Collection))
 g.add((aa.Session, rdfs.subClassOf, dcty.Event))
 
@@ -64,7 +64,7 @@ g.add((aa.screencast, rdfs.subPropertyOf, sc.video))
 
 g.add((aa.created, owl.equivalentProperty, dct.created))
 g.add((aa.nick, owl.equivalentProperty, foaf.nick))
-g.add((aa.email, owl.equivalentProperty, foaf.created))
+g.add((aa.email, owl.equivalentProperty, foaf.email))
 
 # ficaram sem: score
 # 5) especificadas características das funções
