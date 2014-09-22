@@ -128,10 +128,8 @@ f=open("aaStore.rdf","wb")
 f.write(g.serialize())
 f.close()
 print time.time()-T; T=time.time()
-f=open("aaStore.ttl","wb")
-f.write(g.serialize(format="turtle"))
-f.close()
-print time.time()-T; T=time.time()
-
-# colocar online
-# fazer diagrama dos dados
+#f=open("aaStore.ttl","wb")
+#f.write(g.serialize(format="turtle"))
+#f.close()
+#print time.time()-T; T=time.time()
+print("triplifique oo que estah no mongodb para shouts mais recentes")

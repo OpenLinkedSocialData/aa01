@@ -13,6 +13,7 @@ http://purl.org/socialparticipation/aa/User
 * É usado o http://jena.hpl.hp.com/2003/OWLMiniFBRuleReasoner (não o micro ou o padrão, pois pareceu funcionar bem)
 * Parece demorar para responder a primeira query com dados do aa, mas só.
 * Ao iniciar o fuseki com o config-aa.ttl, há vários "WARN  Lexical form '2011-09-06 07:56:57' not valid for datatype http://www.w3.org/2001/XMLSchema#dateTime".
+* Criada propriedade aa:provenance (objeto Literal("MongoDB")) na triplificação dos dados do mongoDB. A propriedade não consta ainda na ontologia ou diagramas.
 
 
 ### Roteiro de triplificação:
