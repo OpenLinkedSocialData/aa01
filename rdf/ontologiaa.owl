@@ -5,98 +5,98 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:nodeID="N92dc68bc2f554f81bc245b6b45f3ea1f">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/shoutMessage"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/Shout">
-    <rdfs:subClassOf rdf:nodeID="N2429a58dfee74cb991f8ae7770320438"/>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Port"/>
-    <owl:subClassOf rdf:nodeID="N67f8cafdbe4041fc98256e1b50728ffe"/>
-    <owl:subClassOf rdf:nodeID="N92dc68bc2f554f81bc245b6b45f3ea1f"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/Session">
-    <owl:subClassOf rdf:nodeID="Neb8bcfb3df5148358b6f791e14a4f247"/>
+    <owl:subClassOf rdf:nodeID="Nb9c12ba84a764beca91d6c31ca3d18cf"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Event"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/checkMessage">
-    <rdfs:subPropertyOf rdf:resource="http://schema.org/text"/>
+  <rdf:Description rdf:nodeID="Nb9c12ba84a764beca91d6c31ca3d18cf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/created"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N30ce1050b5ec4f6a9eb01c24b7d4f59d">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/created"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/screencast">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/video"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/ontologiaa.owl">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dct:description>Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces</dct:description>
-    <owl:versionInfo>0.01a</owl:versionInfo>
-    <dct:title>Ontologiaa</dct:title>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/created">
-    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/created"/>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/email">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/email"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/user">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/checker">
+    <rdfs:subPropertyOf rdf:resource="http://d-nb.info/standards/elementset/gnd#revisor"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N89b2ea28e1d94b9e98eb12c86c031981">
+    <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/shoutMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/shoutMessage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:subPropertyOf rdf:resource="http://schema.org/text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/nick">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/ontologiaa.owl">
+    <dct:title>Ontologiaa</dct:title>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dct:description>Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces</dct:description>
+    <owl:versionInfo>0.01a</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/created">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    <owl:equivalentProperty rdf:resource="http://purl.org/dc/terms/created"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/session">
     <rdfs:subPropertyOf rdf:resource="http://schema.org/collection"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="N67f8cafdbe4041fc98256e1b50728ffe">
-    <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/created"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/user">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://xmlns.com/foaf/0.1/maker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="Neb8bcfb3df5148358b6f791e14a4f247">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
-    <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/created"/>
-    <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N1a43b6237c1b48fab28f4abffb7cb12a">
+  <rdf:Description rdf:nodeID="N080573b5124e40a48b1b35e50959bdd8">
     <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/nick"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/screencast">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:subPropertyOf rdf:resource="http://schema.org/video"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/email">
-    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/created"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/User">
-    <owl:subClassOf rdf:nodeID="N1a43b6237c1b48fab28f4abffb7cb12a"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/socialparticipation/ops#Participant"/>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/dc/elements/1.1/Agent"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/checker">
-    <rdfs:subPropertyOf rdf:resource="http://d-nb.info/standards/elementset/gnd#revisor"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="N2429a58dfee74cb991f8ae7770320438">
+  <rdf:Description rdf:nodeID="N75a2ae5c869f4b83b351bc4c55f152e7">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
     <owl:onProperty rdf:resource="http://purl.org/socialparticipation/aa/user"/>
     <owl:someValuesFrom rdf:resource="http://purl.org/socialparticipation/aa/User"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/nick">
-    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/Shout">
+    <rdfs:subClassOf rdf:resource="http://rdfs.org/sioc/ns#Post"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <owl:subClassOf rdf:nodeID="N30ce1050b5ec4f6a9eb01c24b7d4f59d"/>
+    <rdfs:subClassOf rdf:nodeID="N75a2ae5c869f4b83b351bc4c55f152e7"/>
+    <owl:subClassOf rdf:nodeID="N89b2ea28e1d94b9e98eb12c86c031981"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/User">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/elements/1.1/Agent"/>
+    <owl:subClassOf rdf:nodeID="N080573b5124e40a48b1b35e50959bdd8"/>
+    <rdfs:subClassOf rdf:resource="http://purl.org/socialparticipation/ops#Participant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/socialparticipation/aa/checkMessage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://schema.org/text"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
 </rdf:RDF>

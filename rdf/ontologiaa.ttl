@@ -21,7 +21,7 @@
 <http://purl.org/socialparticipation/aa/Shout> rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty <http://purl.org/socialparticipation/aa/user> ;
             owl:someValuesFrom <http://purl.org/socialparticipation/aa/User> ],
-        sioc:Port,
+        sioc:Post,
         foaf:Document ;
     owl:subClassOf [ a owl:Restriction ;
             owl:onProperty <http://purl.org/socialparticipation/aa/created> ;
@@ -40,7 +40,7 @@
 
 <http://purl.org/socialparticipation/aa/email> a owl:DataProperty,
         owl:FunctionalProperty ;
-    owl:equivalentProperty foaf:created .
+    owl:equivalentProperty foaf:email .
 
 <http://purl.org/socialparticipation/aa/ontologiaa.owl> a owl:Ontology ;
     dct:description "Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces" ;
