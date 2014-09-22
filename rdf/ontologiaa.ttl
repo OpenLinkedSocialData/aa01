@@ -21,6 +21,7 @@
 <http://purl.org/socialparticipation/aa/Shout> rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty <http://purl.org/socialparticipation/aa/user> ;
             owl:someValuesFrom <http://purl.org/socialparticipation/aa/User> ],
+        dcty:Event,
         sioc:Post,
         foaf:Document ;
     owl:subClassOf [ a owl:Restriction ;
