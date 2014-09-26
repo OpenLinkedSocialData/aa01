@@ -13,7 +13,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://purl.org/socialparticipation/aa/Session> rdfs:subClassOf dcty:Collection,
-        dcty:Event ;
+        dcty:Event,
+        ops:Participation ;
     owl:subClassOf [ a owl:Restriction ;
             owl:onProperty <http://purl.org/socialparticipation/aa/created> ;
             owl:someValuesFrom xsd:dateTime ] .
@@ -22,6 +23,7 @@
             owl:onProperty <http://purl.org/socialparticipation/aa/user> ;
             owl:someValuesFrom <http://purl.org/socialparticipation/aa/User> ],
         dcty:Event,
+        ops:Participation,
         sioc:Post,
         foaf:Document ;
     owl:subClassOf [ a owl:Restriction ;

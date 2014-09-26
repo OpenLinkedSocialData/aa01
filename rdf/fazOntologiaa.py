@@ -47,9 +47,11 @@ g.add((aa.User,    rdfs.subClassOf, dc.Agent))
 g.add((aa.User,    rdfs.subClassOf, ops.Participant))
 g.add((aa.Shout,   rdfs.subClassOf, foaf.Document))
 g.add((aa.Shout,   rdfs.subClassOf, sioc.Post))
+g.add((aa.Shout,   rdfs.subClassOf, ops.Participation))
 g.add((aa.Shout, rdfs.subClassOf, dcty.Event))
 g.add((aa.Session, rdfs.subClassOf, dcty.Collection))
 g.add((aa.Session, rdfs.subClassOf, dcty.Event))
+g.add((aa.Session,   rdfs.subClassOf, ops.Participation))
 
 # 3) declaradas propriedades funcionais
 
