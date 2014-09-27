@@ -2,7 +2,8 @@
 #-*- coding: utf-8 -*-
 import rdflib as r
 import _mysql
-import time
+import time, urllib
+from dateutil.parser import parse
 T=time.time()
 db2=_mysql.connect(user="root",passwd="foobar",db="fbdb")
 db=_mysql.connect(user="root",passwd="foobar",db="fbdb2")
@@ -100,7 +101,7 @@ for session in d["sessions"]:
         g.add((user, aa.nick, r.Literal("id found as session checker but not as id for user with nick") ))
     g.add((uri,aa.user,user))
     created=session[2]
-    g.add((uri,aa.created,r.Literal(created,datatype= xsd.dateTime)))
+    g.add((uri,aa.created,r.Literal(parse(created),datatype= xsd.dateTime)))
     if session[3]:
         if session[3] in du.keys():
             checker=du[session[3]]
@@ -151,7 +152,7 @@ for shout in d["messages"]:
     message=shout[4]
     g.add((uri,aa.shoutMessage,r.Literal(message)))
     created=shout[5]
-    g.add((uri,aa.created,r.Literal(created,datatype= xsd.dateTime)))
+    g.add((uri,aa.created,r.Literal(parse(created),datatype= xsd.dateTime)))
     valid=shout[6]
     g.add((uri, aa.valid, r.Literal(valid,datatype=xsd.boolean)))
 
