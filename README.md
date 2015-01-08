@@ -5,6 +5,17 @@ O AA é a Autorregulação Algorítmica.
 
 O aa 0.1 é o AA em flask e mongo via http na url mesmo, + facinho.
 
+- [Recursos](#)
+	- [Scripts básicos](#)
+		- [aaServer.py](#)
+		- [aa.py](#)
+		- [aaTwitter.py](#)
+	- [Instância online para exibir e disponibilizar os dados](#)
+- [Descrição](#)
+	- [Formatação da mensagem](#)
+	- [Exemplo de implementação em software](#)
+- [Questões:](#)
+
 # Recursos
 
 ## Scripts básicos
