@@ -30,9 +30,19 @@ Caso use ORe, indique o caminho onde escreverá os RDFs de cada shout.
 
 (\*) https://github.com/ttm/ORe
 
+### Git hook para integrar os shouts ao trabalho sem overhead
+
+    $ cp hooks/post-commit path_to_repo/.git/hooks
+
+Pronto, ao commitar no repo, a mensagem de commit será
+enviada aos bancos de AA com o início #gitcommit :: para
+melhor identificação
+
 ### aa.py
 
-Script mínimo para usar o aa via linha de comando. Pode ser usado com:
+Script mínimo para usar o aa via linha de comando.
+Subsumido pelo aaORe.py.
+ Pode ser usado com:
 
     $ sudo cp aa.py /usr/local/bin/aa
     $ aa primeira mensagem de aa, ainda anonima

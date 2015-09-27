@@ -8,8 +8,8 @@
 # Configuration:
 NICK="anonymous"
 OReDIR="/home/r/repos/ORe/python/hooks/aa"
-aamongo=True
-ORe=True
+aamongo=1 # 0 to disable
+ORe=1
 
 
 import sys, string, urllib
@@ -37,8 +37,7 @@ else:
         g.add((uri_, aa.nick, r.Literal(NICK,datatype=xsd.string) ))
         g.add((uri,aa.shoutMessage,r.Literal(shout,datatype=xsd.string)))
         g.add((uri,aa.created,r.Literal(datetime.datetime.now(),datatype= xsd.dateTime)))
-        if aamongo:
-            g.add((uri,aa.mongoDuplicate,r.Literal(True,datatype=xsd.boolean)))
+        g.add((uri,aa.mongoDuplicate,r.Literal(aamongo,datatype=xsd.boolean)))
 
         filename="{}/{}.ttl".format(OReDIR,tid)
         f=open(filename,"wb")

@@ -1,0 +1,2 @@
+a=`git log -1 HEAD --pretty=format:%s`
+aa \#gitcommit ::: $a
