@@ -20,6 +20,7 @@ xsd = r.namespace.XSD
 
 g = r.Graph()
 g.namespace_manager.bind("ops", "http://purl.org/socialparticipation/ops#")    
+g.namespace_manager.bind("aa", "http://purl.org/socialparticipation/aa/")    
 g.namespace_manager.bind("rdf", r.namespace.RDF)    
 g.namespace_manager.bind("rdfs", r.namespace.RDFS)    
 g.namespace_manager.bind("foaf", r.namespace.FOAF)    

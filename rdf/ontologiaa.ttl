@@ -1,3 +1,4 @@
+@prefix aa: <http://purl.org/socialparticipation/aa/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcty: <http://purl.org/dc/dcmitype/> .
@@ -12,72 +13,72 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://purl.org/socialparticipation/aa/Session> rdfs:subClassOf dcty:Collection,
+aa:Session rdfs:subClassOf dcty:Collection,
         dcty:Event,
         ops:Participation ;
     owl:subClassOf [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/socialparticipation/aa/created> ;
+            owl:onProperty aa:created ;
             owl:someValuesFrom xsd:dateTime ] .
 
-<http://purl.org/socialparticipation/aa/Shout> rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/socialparticipation/aa/user> ;
-            owl:someValuesFrom <http://purl.org/socialparticipation/aa/User> ],
+aa:Shout rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty aa:user ;
+            owl:someValuesFrom aa:User ],
         dcty:Event,
         ops:Participation,
         sioc:Post,
         foaf:Document ;
     owl:subClassOf [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/socialparticipation/aa/created> ;
-            owl:someValuesFrom xsd:dateTime ],
+            owl:onProperty aa:shoutMessage ;
+            owl:someValuesFrom xsd:string ],
         [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/socialparticipation/aa/shoutMessage> ;
-            owl:someValuesFrom xsd:string ] .
+            owl:onProperty aa:created ;
+            owl:someValuesFrom xsd:dateTime ] .
 
-<http://purl.org/socialparticipation/aa/checkMessage> a owl:DataProperty,
+aa:checkMessage a owl:DataProperty,
         owl:FunctionalProperty ;
     rdfs:subPropertyOf schema:text .
 
-<http://purl.org/socialparticipation/aa/checker> a owl:FunctionalProperty,
+aa:checker a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:subPropertyOf gndo:revisor .
 
-<http://purl.org/socialparticipation/aa/email> a owl:DataProperty,
+aa:email a owl:DataProperty,
         owl:FunctionalProperty ;
     owl:equivalentProperty foaf:email .
 
-<http://purl.org/socialparticipation/aa/ontologiaa.owl> a owl:Ontology ;
+aa:ontologiaa.owl a owl:Ontology ;
     dct:description "Ontologia enxuta do AA para conectar o namespace da ontologia com outros namespaces" ;
     dct:title "Ontologiaa" ;
     owl:versionInfo "0.01a" .
 
-<http://purl.org/socialparticipation/aa/screencast> a owl:DataProperty,
+aa:screencast a owl:DataProperty,
         owl:FunctionalProperty ;
     rdfs:subPropertyOf schema:video .
 
-<http://purl.org/socialparticipation/aa/session> a owl:FunctionalProperty,
+aa:session a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:subPropertyOf schema:collection .
 
-<http://purl.org/socialparticipation/aa/User> rdfs:subClassOf dc:Agent,
+aa:User rdfs:subClassOf dc:Agent,
         ops:Participant,
         foaf:Person ;
     owl:subClassOf [ a owl:Restriction ;
-            owl:onProperty <http://purl.org/socialparticipation/aa/nick> ;
+            owl:onProperty aa:nick ;
             owl:someValuesFrom xsd:string ] .
 
-<http://purl.org/socialparticipation/aa/nick> a owl:DataProperty,
+aa:nick a owl:DataProperty,
         owl:FunctionalProperty ;
     owl:equivalentProperty foaf:nick .
 
-<http://purl.org/socialparticipation/aa/shoutMessage> a owl:DataProperty,
+aa:shoutMessage a owl:DataProperty,
         owl:FunctionalProperty ;
     rdfs:subPropertyOf schema:text .
 
-<http://purl.org/socialparticipation/aa/user> a owl:FunctionalProperty,
+aa:user a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:subPropertyOf foaf:maker .
 
-<http://purl.org/socialparticipation/aa/created> a owl:DataProperty,
+aa:created a owl:DataProperty,
         owl:FunctionalProperty ;
     owl:equivalentProperty dct:created .
 

@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-import pymongo, datetime, string, rdflib as r, time,urllib
+import datetime, string, rdflib as r, time,urllib
 T=time.time()
 client=pymongo.MongoClient("mongodb://labmacambira:macambira00@ds031948.mongolab.com:31948/aaserver")
 shouts=client.aaserver.shouts.find({})
