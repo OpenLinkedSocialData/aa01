@@ -16,6 +16,20 @@ Um aplicativo mínimo em Flask cujos caminhos e funções são:
 * /allJson/ -> retorna os shouts todos como json
 * /shout/ -> usado para registrar novo shout via GET, com ?nick=anonymous&shout=;aqui a mensagem de aa
 
+### aaORe.py
+
+Atual script mínimo para usar o aa via linha de comando
+com possibilidades de publicar o shout em um cliente mongo
+ou em RDF via ORe(\*). Pode ser usado com:
+
+    $ sudo cp aaORe.py /usr/local/bin/aa
+    $ aa primeira mensagem de aa, ainda anonima
+
+Para colocar seu nick, abra o aa.py e mude o valor da variável NICK.
+Caso use ORe, indique o caminho onde escreverá os RDFs de cada shout.
+
+(\*) https://github.com/ttm/ORe
+
 ### aa.py
 
 Script mínimo para usar o aa via linha de comando. Pode ser usado com:
