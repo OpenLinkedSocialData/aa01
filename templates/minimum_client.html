@@ -1,0 +1,8 @@
+<html>
+    {% for shout in shouts %}
+        {% for key, value in shout.iteritems() %}
+            {{ key }}: {{ value }},
+        {% endfor %}
+        <br/><br/>
+    {% endfor %}
+</html>
