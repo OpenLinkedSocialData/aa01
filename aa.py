@@ -8,13 +8,13 @@
 # Configuration:
 NICK="anonymous"
 
-import sys, string, urllib
+import sys, string, urllib2
 if len(sys.argv)==1:
     print("usage: aa this is a aa shout, for registering ongoing work")
 else:
     shout=string.join(sys.argv[1:]," ")
     mirrors="http://aaserver.herokuapp.com/", "http://aa.daniloshiga.com/"
-    aastring="shout?nick=%s&shout=%s"%(NICK,urllib.quote(shout))
+    aastring="shout?nick=%s&shout=%s"%(NICK,urllib2.quote(shout))
 
     n_mirrors = len(mirrors)
     for i in range(n_mirrors):
