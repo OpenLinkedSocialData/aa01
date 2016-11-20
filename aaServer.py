@@ -32,6 +32,7 @@ def shout():
     print(nick, shout, now)
     client.aaserver.shouts.insert({"time":now,"nick":nick,"shout":shout})
     return 'Hello World!'
+    return 'Shout succeeded!'
 
 @app.route('/')
 def hello():
